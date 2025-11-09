@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지속가능 소비 홈페이지</title>
+  <style>
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      background-color: #F5F7F5;
+      color: #2F2F2F;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    header {
+      background-color: #E0F0E0;
+      padding: 30px;
+      text-align: center;
+      border-bottom: 2px solid #3A5A40;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3A5A40;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #CDE5CD;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px 0;
+    }
+
+    nav button {
+      background-color: #3A5A40;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #2E4733;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .section {
+      background-color: #FFFFFF;
+      border: 2px solid #A9CBB9;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      color: #3A5A40;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      color: #3E3E3E;
+      font-size: 17px;
+    }
+
+    .map-image {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      border-radius: 10px;
+      border: 1.5px solid #A9C3A9;
+    }
+
+    /* 설문 입력 폼 스타일 */
+    .survey-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .survey-form input,
+    .survey-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #B9CBB9;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #F9FDF9;
+      outline: none;
+    }
+
+    .survey-form textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .survey-btn {
+      background-color: #3A5A40;
+      color: white;
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 180px;
+      align-self: center;
+      transition: 0.3s;
+    }
+
+    .survey-btn:hover {
+      background-color: #2E4733;
+    }
+
+    /* 상거래 윤리 강조 카드 */
+    .ethics-card {
+      background-color: #E6F2FF;
+      border-left: 5px solid #4A90E2;
+      padding: 20px;
+      margin-top: 15px;
+      border-radius: 6px;
+    }
+
+    .ethics-card button {
+      margin-top: 15px;
+      background-color: #4A90E2;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .ethics-card button:hover {
+      background-color: #357ABD;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #E0F0E0;
+      color: #4A604B;
+      font-size: 15px;
+      border-top: 2px solid #3A5A40;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌿 지속가능 소비 홈페이지</h1>
+    <p>충남대학교를 중심으로 지속가능한 소비문화를 함께 만들어갑니다.</p>
+  </header>
+
+  <nav>
+    <button onclick="document.getElementById('map').scrollIntoView({behavior:'smooth'})">지역 기반 지도</button>
+    <button onclick="document.getElementById('ethics').scrollIntoView({behavior:'smooth'})">상거래상 소비 윤리</button>
+    <button onclick="document.getElementById('survey').scrollIntoView({behavior:'smooth'})">업체 추천 설문</button>
+  </nav>
+
+  <div class="container">
+
+    <!-- 지도 섹션 -->
+    <div class="section" id="map">
+      <h2>📍 지역 기반 투명 소비 지도</h2>
+      <p>
+        충남대학교를 중심으로, 지역 사회 내에서 <strong>투명한 가격과 윤리적 소비를 실천하는 다양한 업체</strong>를 소개하는 지도를 제공합니다.
+      </p>
+      <img src="health_map.png" alt="충남대학교 주변 지속가능 소비 업체 지도" class="map-image">
+    </div>
+
+    <!-- 상거래상 소비윤리 섹션 -->
+    <div class="section" id="ethics">
+      <h2>🤝 상거래상 소비 윤리</h2>
+      <p>
+        상거래상 소비윤리는 시장의 신뢰와 지속가능성을 유지하는 데 필수적입니다. 불공정한 약관이나 허위 광고, 과도한 수수료 등은 소비자의 권리를 침해하고 시장의 건전한 경쟁을 해치며, 궁극적으로 지속가능한 경제 환경을 약화시킵니다.
+      </p>
+
+      <div class="ethics-card">
+        <p>✔ 불공정 약관 체크리스트 다운로드<br>
+           ✔ 윤리적 거래 가이드라인 확인</p>
+        <button>가이드라인 보기</button>
+      </div>
+    </div>
+
+    <!-- 설문 섹션 -->
+    <div class="section" id="survey">
+      <h2>💬 지속가능한 소비 지도에 추가되면 좋을 업체를 추천해주세요</h2>
+      <p>
+        헬스장뿐만 아니라 카페, 공정무역 매장, 소셜벤처 등 다양한 지역 업체를 지도에 포함하고 싶습니다. 여러분이 추천하는 업체를 입력해주시면, 다음 지도 제작에 반영하겠습니다.
+      </p>
+
+      <form class="survey-form">
+        <input type="text" placeholder="업체 이름을 입력해주세요">
+        <textarea placeholder="이 업체를 추천하는 이유를 적어주세요"></textarea>
+        <button type="submit" class="survey-btn">보내기</button>
+      </form>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 지속가능 소비 프로젝트 | 충남대학교
+  </footer>
+
+</body>
+</html>
